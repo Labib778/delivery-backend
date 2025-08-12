@@ -116,7 +116,10 @@ app.post('/order/cancel', auth, async (req, res) => {
   await order.save();
   res.json({ message: "Order cancelled" });
 });
-
+// Add this just before app.listen
+app.get('/ping', (req, res) => {
+  res.status(200).send('pong');
+});
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
