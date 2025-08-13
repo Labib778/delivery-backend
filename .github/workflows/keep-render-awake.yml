@@ -10,7 +10,7 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     env:
-      URL: ${{ secrets.RENDER_URL }}
+      URL: ${{ secrets.https://delivery-backend-jd78.onrender.com }}
     steps:
       - name: Ping backend (keep alive)
         run: |
