@@ -28,7 +28,7 @@ const User = mongoose.model('User', userSchema);
 const orderSchema = new mongoose.Schema({
   userId: mongoose.Schema.Types.ObjectId,
   product: String,
-  qty: Number,
+  qty: String, // now qty can store text like "H", "Sg", "10", etc.
   address: String,
   phone: String,
   status: { type: String, default: "Placed" },
